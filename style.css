@@ -1,0 +1,153 @@
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+	background-color: hsl(233, 47%, 7%);
+}
+
+.grid-container {
+	display: grid;
+	grid-template:
+	"in i" auto / 35%;
+	justify-content: center;
+	align-content: center;
+	height: 100%;
+}
+
+.grid-stats {
+	display: grid;
+	grid-template:
+	"num1 		num2 	num3"
+	"stats1 	stats2 	stats3" auto;
+	color: hsl(0, 0%, 100%);
+	margin-top: 100px;
+}
+
+.info {
+	background-color: hsl(244, 38%, 16%);
+	border-radius: 10px 0px 0px 10px;
+	padding: 3rem;
+	grid-area: in;
+}
+
+.color {
+	background-color: hsl(277, 120%, 61%);
+	display: inline-block;
+	border-radius: 0px 10px 10px 0px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	border-radius: 0px 10px 10px 0px;
+	grid-area: i;
+	opacity: 50%;
+}
+
+.num {
+	font-family: "Inter";
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.stats {
+	color: hsla(0, 0%, 100%, 0.6);
+	font-family: "Lexend Deca";
+	text-transform: uppercase;
+	font-size: 2px;
+}
+
+h1 {
+	font-family: "Lexend Deca";
+	font-weight: 400, 700;
+	color: hsl(0, 0%, 100%);
+	font-size: 30px;
+}
+
+.main {
+	font-family: "Inter";
+	font-weight: 400;
+	color: hsla(0, 0%, 100%, 0.6);
+	font-size: 15px;
+}
+
+span {
+	color: hsl(277, 64%, 61%);
+}
+
+@media (max-width: 375px) {
+	.grid-container {
+		grid-template:
+		"i"
+		"in" auto;
+	}
+
+	.info {
+		border-radius: 0px 0px 10px 10px;
+		text-align: center;
+	}
+
+	img {
+		border-radius: 10px 10px 0px 0px;
+	}
+
+	.color {
+		border-radius: 10px 10px 0px 0px;
+	}
+
+	.grid-stats {
+		grid-template:
+		"num1"
+		"stats1"
+		"num2"
+		"stats2"
+		"num3"
+		"stats3" auto;
+		margin-top: 20px;
+		}
+
+		.num, .stats {
+			margin: 3px;
+		}
+}
+
+.attribution { 
+	font-size: 11px; 
+	text-align: center;
+	color: white;
+}
+
+.attribution a { 
+	color: hsl(228, 45%, 44%); 
+}
+
+.icon {
+	color: white;
+	text-align: center;
+}
+
+.stats1 {
+	grid-area: stats1;
+}
+
+.stats2 {
+	grid-area: stats2;
+}
+
+.stats3 {
+	grid-area: stats3;
+}
+
+.num1 {
+	grid-area: num1;
+}
+
+.num2 {
+	grid-area: num2;
+}
+
+.num3 {
+	grid-area: num3;
+}
